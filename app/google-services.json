@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "718147856348",
+    "firebase_url": "https://taakjes-a58e5.firebaseio.com",
+    "project_id": "taakjes-a58e5",
+    "storage_bucket": "taakjes-a58e5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718147856348:android:13c3c6a65bcbec53",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718147856348-6kbtc56oei4arbhfgknn12ecnajgcq6d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myapplication",
+            "certificate_hash": "b9c2603ddec2fc86f09b8874d8eb93c24be80721"
+          }
+        },
+        {
+          "client_id": "718147856348-ld7e4ltoua3inco4lnmnka3fqqu2t96c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMKq5RYuzrkAsUhz63Tcbjxq496kPyikk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718147856348-ld7e4ltoua3inco4lnmnka3fqqu2t96c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
