@@ -1,5 +1,6 @@
 package com.example.myapplication.ui.tabs;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -21,11 +23,13 @@ import com.example.myapplication.AddTask;
 import com.example.myapplication.R;
 import com.example.myapplication.TaskList.Task;
 import com.example.myapplication.TaskList.TaskAdapter;
+import com.example.myapplication.TaskList.ViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static android.app.Activity.RESULT_OK;
+import static android.view.GestureDetector.*;
 
 public class TabTakenLijst extends Fragment {
     List<Task> mTasks;
@@ -33,6 +37,8 @@ public class TabTakenLijst extends Fragment {
     private TaskAdapter mTaskAdapter;
 //    private GestureDetector mGestureDetector;
     private ImageButton addTaskButton;
+    private ViewModel mTaskViewModel;
+    private GestureDetector mGestureDetector;
     public static final String ADD_TASK = "NewTask";
     public static final int NewTaskCode = 4321;
     public static final String VIEW_TASK = "ViewTask";
@@ -46,8 +52,14 @@ public class TabTakenLijst extends Fragment {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.taskRecyclerView);
         addTaskButton = view.findViewById(R.id.addTask);
         mTasks = new ArrayList<>();
-        mTaskAdapter = new TaskAdapter(mTasks);
-        mRecyclerView.setAdapter(mTaskAdapter);
+        mTaskViewModel = ViewModelProviders.of(this).get(ViewModel.class);
+        mTaskViewModel.getmTasks().observe(this, tasks -> {
+            mTasks = tasks;
+            mTaskAdapter = new TaskAdapter(mTasks);
+            mRecyclerView.setAdapter(mTaskAdapter);
+            updateUI();
+        });
+
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(layoutManager);
         addTaskButton.setOnClickListener(new View.OnClickListener() {
@@ -69,10 +81,11 @@ public class TabTakenLijst extends Fragment {
     }
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == NewTaskCode){
             if(resultCode == RESULT_OK){
                 Task task = data.getParcelableExtra(TabTakenLijst.ADD_TASK);
-                mTasks.add(task);
+                mTaskViewModel.insert(task);
                 updateUI();
             }
         }

@@ -1,14 +1,34 @@
 package com.example.myapplication.TaskList;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+@Entity(tableName = "taskTable")
 public class Task implements Parcelable {
+
+    @PrimaryKey(autoGenerate = true)
+    private Long id;
+
+    @ColumnInfo(name = "title")
     private String title;
+
+    @ColumnInfo(name="description")
     private String description;
+
     public Task(String title, String description) {
         this.title = title;
         this.description = description;
+    }
+
+    public Long getId(){
+        return id;
+    }
+
+    public void setId(Long id){
+        this.id = id;
     }
 
     public String getTitle() {
