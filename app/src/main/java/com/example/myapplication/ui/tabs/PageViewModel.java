@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.main;
+package com.example.myapplication.ui.tabs;
 
 import android.arch.core.util.Function;
 import android.arch.lifecycle.LiveData;

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.main;
+package com.example.myapplication.ui.tabs;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.main;
+package com.example.myapplication.ui.tabs;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,11 @@ import android.view.ViewGroup;
 
 import com.example.myapplication.R;
 
-public class TabTakenLijst extends Fragment {
+public class TabDeelnemers extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.tabtakenlijst, container, false);
+        View rootView = inflater.inflate(R.layout.tabdeelnemers, container, false);
         return rootView;
     }
 }

@@ -31,14 +31,14 @@
             app:layout_constraintVertical_bias="0.428" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/dodDay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
-            android:text="6"
+            android:text="7"
             android:textColor="@android:color/background_dark"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -49,21 +49,21 @@
     </android.support.constraint.ConstraintLayout>
 
     <android.support.constraint.ConstraintLayout
-        android:layout_width="424dp"
-        android:layout_height="673dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="383dp"
+        android:layout_height="504dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="170dp"
             android:layout_height="62dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="148dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
             android:text="Huidige taak"
             android:textColor="@android:color/background_dark"
             android:textSize="30sp"
@@ -86,7 +86,6 @@
             android:layout_width="206dp"
             android:layout_height="47dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="44dp"
             android:text="Taak afvinken"
             android:textColor="@android:color/black"
             android:textSize="30sp"
@@ -97,8 +96,8 @@
             android:id="@+id/checkBox"
             android:layout_width="61dp"
             android:layout_height="47dp"
-            android:layout_marginStart="84dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="24dp"
             android:scaleX="3.5"
             android:scaleY="3.5"
             android:textSize="40sp"
@@ -106,52 +105,48 @@
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/chatButton"
             android:layout_width="96dp"
             android:layout_height="105dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="208dp"
             android:background="@android:color/transparent"
             android:scaleX="3"
             android:scaleY="3"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.949"
+            app:layout_constraintHorizontal_bias="0.847"
             app:layout_constraintStart_toEndOf="@+id/checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.094"
             app:srcCompat="@drawable/ic_message_black_24dp" />
 
-        <android.support.constraint.ConstraintLayout
-            android:layout_width="420dp"
-            android:layout_height="160dp"
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout4"
+        android:layout_width="420dp"
+        android:layout_height="160dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/nav_overview"
+            android:layout_width="263dp"
+            android:layout_height="93dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:background="@color/colorPrimary"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Compleet overzicht"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent">
-
-            <Button
-                android:id="@+id/nav_overview"
-                android:layout_width="263dp"
-                android:layout_height="93dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Compleet overzicht"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
