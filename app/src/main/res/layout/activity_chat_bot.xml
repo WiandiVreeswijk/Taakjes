@@ -43,16 +43,11 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="User Say"
-            android:textColor="@color/aidialog_background"
-            />
-
-        <TextView
             android:id="@+id/txtSpeechInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/null"
+            android:layout_alignStart="@+id/null"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:padding="20dp"
